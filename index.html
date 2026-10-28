@@ -3,11 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Game</title>
+    <title>Drop by Drop</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to the Charity Water Game Prototype</h1>
-    <script src="script.js"></script>
+    <main id="game" class="game-shell">
+        <canvas id="gameCanvas" width="1280" height="720" aria-label="Drop by Drop platform game"></canvas>
+
+        <button id="pauseButton" class="canvas-pause" type="button" aria-label="Pause game"><span></span><span></span></button>
+        <button id="restartButton" class="canvas-restart" type="button" aria-label="Restart game">Restart</button>
+
+        <div class="touch-controls" aria-label="Game controls">
+            <div class="move-controls">
+                <button id="leftButton" class="control-button" type="button" aria-label="Move left">&#9664;</button>
+                <button id="rightButton" class="control-button" type="button" aria-label="Move right">&#9654;</button>
+            </div>
+            <button id="jumpButton" class="control-button jump-button" type="button" aria-label="Jump">&#9650;</button>
+        </div>
+
+        <div id="gameOverlay" class="game-overlay start-menu">
+            <div class="menu-brand"><img src="img/cw_logo_horizontal.png" alt="charity: water"></div>
+            <div class="menu-title"><h1>DROP<br><strong>BY DROP</strong></h1><p>Small drops make a big difference.</p></div>
+            <div class="menu-actions"><button id="menuPlayButton" class="primary-button" type="button">PLAY</button></div>
+        </div>
+    </main>
+    <script src="game.js"></script>
 </body>
 </html>
